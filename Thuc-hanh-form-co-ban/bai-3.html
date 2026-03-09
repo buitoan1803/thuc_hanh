@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tham gia xem phim</title>
+    <style>
+        div {
+            margin: 20px;
+            border: 15px solid green;
+            padding: 50px;
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Đăng ký tham gia xem phim</h1>
+
+    <form >
+
+        <div>
+            <h3>Thông tin đăng ký</h3>
+
+            <label for="name">Họ và tên:</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email</label> <br>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div>
+            <label for="time">Xuất chiếu:</label>
+            <select name="time" id="time">
+                <option>10:00</option>
+                <option>14:00</option>
+                <option>17:00</option>
+                <option>19:00</option>
+            </select>
+
+        </div>
+        
+        <div>
+            
+            <h3>Chọn loại vé:</h3>
+            <input type="radio" id="thuong" name="ticket">
+            <label for="thuong">Vé thường </label>
+            <br>
+
+            <input type="radio" name="ticket" id="VIP">
+            <label for="VIP">Vé VIP</label>
+        </div>
+
+        <div>
+            <h3>Chọn combo:</h3>
+            
+            <input type="checkbox" name="combo" id="combo">
+            <label for="combo">Bắp + nước</label><br>
+
+            <input type="checkbox" name="combo" id="combo">
+            <label for="combo">Bắp lớn</label> <br>
+
+            <input type="checkbox" name="combo" id="combo">
+            <label for="combo">Nước ngọt</label><br><br>
+
+            <label for="note">Yêu cầu đặc biệt:</label><br>
+            <textarea name="note" id="note" rows="5" cols="40"></textarea>
+        </div>
+    </form>
+</body>
+</html>

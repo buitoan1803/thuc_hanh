@@ -1,0 +1,317 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+
+}
+
+/* Grid Layout chính */
+.layout{
+    /* Kích hoạt gọi grid */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "hero hero"
+    "courses courses"
+    "stats stats"
+    "footer footer"
+    ;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header{
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: wheat;
+}
+
+.logo {
+    font-size: 40px;
+    color: rgb(6, 131, 6);
+    background: #eff7de;
+    border: none;
+    border-radius: 100%;
+    margin: 10px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.menu ul{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    list-style: none;
+    gap: 20px
+}
+
+.menu ul a{
+    text-decoration: none;
+    color: rgb(6, 131, 6);
+}
+
+.search-register{
+    display: flex;
+    padding:10px;
+    margin: 10px;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+  padding: 10px;
+  margin: 1px;
+    font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.register-btn{
+    width: 90px;
+
+    margin: 10px;
+    padding: 10px;
+    border: 2px;
+    
+    background: green;
+    color: white;
+    gap: 20px;
+}
+
+/* HERO */
+.hero{
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: #d2fffd;
+    max-width: 100%;
+    height: 450px;
+    padding: 20px;
+    margin: 2px;
+    gap: 20px;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.hero-title{
+    font-size: 55px;
+    color: rgb(9, 175, 17);
+    gap: 20px;
+}
+
+.hero-tagline{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hero-button{
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.hero-button button{
+    margin: 10px;
+    padding: 8px;
+    width: 120px;
+    height: 35px;
+    border: none;
+    background: green;
+    color: aliceblue;
+    font-weight: bold;
+
+}
+.hero-image img{
+    width: 900px;
+    height: 400px;
+    
+}
+
+
+/* Courses */
+.courses{
+    grid-area: courses;
+    background: #eff7de;
+    width: 100%;
+    margin: 2px;
+    padding: 10px;
+}
+
+.courses-content{
+    display: inline;
+    font-size: 25px;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.courses-content p{
+    font-size: 18px;
+}
+
+.courses-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+    padding: 10px;
+    gap: 30px;
+}
+.card{
+    position: relative;
+    top: 10px;
+    left: 0px;
+    display: flex;
+    background: rgb(211, 243, 152);
+    flex-direction: column;
+    border: none;
+    border-radius: 20px 20px;
+    padding: 10px;
+    height: 100%;
+    gap: 20px;
+}
+
+
+.view-detail-btn{
+    width: 90px;
+    height: 30px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 10px 10px;
+    margin-top: auto;    
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 100%;
+    font-size: 15px;
+}
+
+/* STATS */
+.stats{
+    grid-area: stats;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    background: rgb(240, 226, 201);
+    padding: 20px;
+}
+
+.courses-box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: none;
+    border-radius: 100%;
+    background: rgb(255, 255, 255);
+    box-sizing:content-box;
+    padding: 10px;
+    margin: 10px;
+}
+
+.courses-box h2{
+    font-size: 60px;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+.courses-box p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    margin: 5px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.about h4{
+    font-size: 25px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.contact h4{
+    font-size: 25px;
+}
+
+.policy{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.policy h4{
+    font-size: 25px;
+}
+.policy ul{
+    list-style: none;
+    
+}
+.floating-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(56, 197, 202);
+}
+.floating-btn img{
+    width: 30px;
+    height: 30px;
+    gap: 20px;
+}
