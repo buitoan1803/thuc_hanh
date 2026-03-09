@@ -59,7 +59,7 @@ body{
     grid-area: footer;
     background: #eee;
     padding: 20px;
-    text-align:calc(20px 50px);
+    text-align: center;
     
 }
 
